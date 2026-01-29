@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>SkillSwap</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+
+<h1>SkillSwap 🚀</h1>
+
+<div id="greeting"></div>
+<div style="text-align:center; margin-bottom:20px;">
+    <button id="loginBtn" onclick="showLogin()">Увійти</button>
+    <button id="registerBtn" onclick="showRegister()">Реєстрація</button>
+    <button id="logoutBtn" onclick="logout()" style="display:none;">Вийти</button>
+</div>
+
+
+
+<!-- LOGIN -->
+<div id="loginBox" style="display:none;">
+    <input id="loginUsername" placeholder="Логін">
+    <input id="loginPassword" type="password" placeholder="Пароль">
+    <button onclick="login()">Вхід</button>
+    <div id="loginResult" style="color: green;"></div>
+</div>
+
+<!-- REGISTER -->
+<div id="registerBox" style="display:none;">
+    <input id="regUsername" placeholder="Логін">
+    <input id="regEmail" placeholder="Email">
+    <input id="regPassword" type="password" placeholder="Пароль">
+    <button onclick="register()">Зареєструватися</button>
+    <div id="regResult" style="color: green;"></div>
+</div>
+
+<!-- ADD SKILL -->
+<h2>Додати навичку</h2>
+<div>
+    <input id="skillTitle" placeholder="Назва навички">
+    <input id="skillDesc" placeholder="Опис навички">
+    <select id="skillCategoryAdd">
+        <option value="">Категорія</option>
+        <option value="programming">Програмування</option>
+        <option value="music">Музика</option>
+        <option value="sports">Спорт</option>
+        <option value="languages">Мови</option>
+        <option value="art">Мистецтво</option>
+        <option value="science">Наука</option>
+        <option value="cooking">Кулінарія</option>
+        <option value="other">Інше</option>
+    </select>
+    <select id="skillLevelAdd">
+        <option value="">Рівень</option>
+        <option value="beginner">Початківець</option>
+        <option value="intermediate">Середній</option>
+        <option value="advanced">Високий</option>
+        <option value="expert">Експерт</option>
+    </select>
+    <label>
+        <input type="checkbox" id="canTeach"> Можу навчати
+    </label>
+    <label>
+        <input type="checkbox" id="wantLearn"> Хочу вчитися
+    </label>
+    <button id="createSkillBtn">Додати навичку</button>
+</div>
+
+<!-- FILTER & SEARCH -->
+<h2>Пошук та фільтри</h2>
+<div>
+    <input id="searchSkill" placeholder="Пошук  за описом">
+    <select id="filterCategory">
+        <option value="">Всі категорії</option>
+        <option value="programming">Програмування</option>
+        <option value="music">Музика</option>
+        <option value="sports">Спорт</option>
+        <option value="languages">Мови</option>
+        <option value="art">Мистецтво</option>
+        <option value="science">Наука</option>
+        <option value="cooking">Кулінарія</option>
+        <option value="other">Інше</option>
+    </select>
+    <select id="filterLevel">
+        <option value="">Всі рівні</option>
+        <option value="beginner">Початківець</option>
+        <option value="intermediate">Середній</option>
+        <option value="advanced">Високий</option>
+        <option value="expert">Експерт</option>
+    </select>
+    <button id="applyFilterBtn">Застосувати</button>
+</div>
+
+<!-- SKILLS LIST -->
+<h2>Список навичок</h2>
+<ul id="skillsList"></ul>
+
+<script src="/static/js/index.js"></script>
+</body>
+</html>
+

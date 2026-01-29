@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+input, select, button {
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#skillsList li {
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #ecf0f1;
+    border-radius: 4px;
+}
+#greeting {
+    text-align: center;      
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+#loginBtn,
+#registerBtn,
+#logoutBtn {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+}
